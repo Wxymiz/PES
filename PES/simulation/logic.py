@@ -47,7 +47,6 @@ class Logic:
                     if student.ects <= 0:
                         student.is_dead = True
                 student.next_course = ''
-            student.alkohol -= 1
         # Usuwanie studentow gdy odpadli
         for klucz in list(self.elements['students'].keys()):
             if self.elements['students'][klucz].is_dead:

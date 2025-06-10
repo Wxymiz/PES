@@ -62,10 +62,11 @@ class BaseStudent(SimulationObject):
         rotated_sprite = pygame.transform.rotate(self.sprite, self.sprite_angle)
         rect = rotated_sprite.get_rect(center=(self.x, self.y))
         screen.blit(rotated_sprite, (self.x - self.width // 2, self.y - self.height // 2))
+        
         # PASKI STANU
         # Alkohol
-        pygame.draw.rect(screen, (100, 100, 100), (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ALKOHOL, MAX_BAR_WIDTH, BAR_HEIGHT))
-        pygame.draw.rect(screen, COLOR_BAR_ALKOHOL, (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ALKOHOL, int(MAX_BAR_WIDTH * (self.alkohol / self.max_alkohol)), BAR_HEIGHT))
+        # pygame.draw.rect(screen, (100, 100, 100), (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ALKOHOL, MAX_BAR_WIDTH, BAR_HEIGHT))
+        # pygame.draw.rect(screen, COLOR_BAR_ALKOHOL, (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ALKOHOL, int(MAX_BAR_WIDTH * (self.alkohol / self.max_alkohol)), BAR_HEIGHT))
         # Ects
         pygame.draw.rect(screen, (100, 100, 100), (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ECTS, MAX_BAR_WIDTH, BAR_HEIGHT))
         pygame.draw.rect(screen, COLOR_BAR_ECTS, (self.x - MAX_BAR_WIDTH // 2, self.y - ABOVE_BAR_DISTANCE_ECTS, int(MAX_BAR_WIDTH * (self.ects / self.max_ects)), BAR_HEIGHT))

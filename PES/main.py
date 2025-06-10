@@ -7,21 +7,47 @@ import window
 import objects
 from utils import ImageLoader,SpritesExamplesCreator as SpEC
 
+# Settings
+STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y = 359,359
+
 def main():
     # Inicjalizacja okna symulacji
     okienko = window.Window(width=1920, height=1080, title="PES")
+
     # Zaladowanie obrazu tla
-    background = ImageLoader.load_image('background').convert()
+    # background = ImageLoader.load_image('background').convert()
     # Ustawienie obrazu tla na tlo okienka
-    okienko.set_background(background)
+    # okienko.set_background(background)
+
     # Tworzenie obiektów do symulacji
     students = [
-        objects.students.Freshman(359,359, ImageLoader.load_image(image_name="freshman",size=(40,40)), "Mariusz", next_course=''),
-        objects.students.Freshman(359,359, ImageLoader.load_image(image_name="freshman",size=(40,40)), "Ziemowit", next_course=''),
-        objects.students.Overachiever(359,359, ImageLoader.load_image(image_name="overachiever",size=(40,40)), "Karol", next_course=''),
-        objects.students.Droppeddown(359,359, ImageLoader.load_image(image_name="droppeddown",size=(40,40)), "Boguslaw", next_course=''),
-        objects.students.Slacker(359,359, ImageLoader.load_image(image_name="slacker",size=(40,40)), "Marek", next_course=''),
-        objects.students.Slacker(359,359, ImageLoader.load_image(image_name="slacker",size=(40,40)), "Maciek", next_course='')
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman",size=(40,40)), "Mariusz", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman",size=(40,40)), "Ziemowit", next_course=''),
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever",size=(40,40)), "Karol", next_course=''),
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown",size=(40,40)), "Boguslaw", next_course=''),
+        objects.students.Slacker(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="slacker",size=(40,40)), "Marek", next_course=''),
+        objects.students.Slacker(STUDENTS_SPAWNPOINT_X,STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="slacker",size=(40,40)), "Maciek", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman", size=(40,40)), "Tadeusz", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman", size=(40,40)), "Janusz", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman", size=(40,40)), "Ryszard", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman", size=(40,40)), "Olgierd", next_course=''),
+        objects.students.Freshman(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="freshman", size=(40,40)), "Witold", next_course=''),
+
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever", size=(40,40)), "Szymon", next_course=''),
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever", size=(40,40)), "Mateusz", next_course=''),
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever", size=(40,40)), "Damian", next_course=''),
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever", size=(40,40)), "Patryk", next_course=''),
+        objects.students.Overachiever(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="overachiever", size=(40,40)), "Igor", next_course=''),
+
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown", size=(40,40)), "Wacław", next_course=''),
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown", size=(40,40)), "Jerzy", next_course=''),
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown", size=(40,40)), "Mieczysław", next_course=''),
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown", size=(40,40)), "Zbigniew", next_course=''),
+        objects.students.Droppeddown(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="droppeddown", size=(40,40)), "Kazimierz", next_course=''),
+
+        objects.students.Slacker(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="slacker", size=(40,40)), "Błażej", next_course=''),
+        objects.students.Slacker(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="slacker", size=(40,40)), "Dawid", next_course=''),
+        objects.students.Slacker(STUDENTS_SPAWNPOINT_X, STUDENTS_SPAWNPOINT_Y, ImageLoader.load_image(image_name="slacker", size=(40,40)), "Bartosz", next_course=''),
     ]
     buildings = [
         objects.Building(x=360, y=198, sprite=SpEC.get_surface(color='green', text='A7'), name="A7"),
@@ -87,8 +113,6 @@ def main():
         simulation_logic.add_element("pubs",pub)
     for student in students:
         simulation_logic.add_element("students",student)
-    # for path_object in path_objects:
-    #     simulation_logic.add_element(path_object)
 
     # dousuniecia
     simulation_logic.map.wczytaj_z_pliku("mapa.json")
