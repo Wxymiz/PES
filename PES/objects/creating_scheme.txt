@@ -1,0 +1,2 @@
+All objects are child objects from 'simulation_object' parent.
+It have standard atribiutes and methods.

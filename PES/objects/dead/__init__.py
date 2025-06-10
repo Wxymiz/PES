@@ -1,0 +1,1 @@
+from .dead_student import DeadStudent
